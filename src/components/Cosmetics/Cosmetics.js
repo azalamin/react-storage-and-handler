@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addNumber } from '../../utilities/calculator';
 import Cosmetic from '../Cosmetic/Cosmetic';
 
 const Cosmetics = () => {
@@ -12,8 +13,12 @@ const Cosmetics = () => {
 
     }, [])
 
+    const total = addNumber(cosmetics);
+
+
     return (
         <div>
+            <h1>Total: {total}</h1>
             {
                 cosmetics.map(cosmetic => <Cosmetic 
                     key={cosmetic.id}

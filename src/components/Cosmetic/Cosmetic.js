@@ -12,7 +12,7 @@ const Cosmetic = (props) => {
     const deleteFromCart = (id) => {
         deleteFromDb(id)
     }
-    
+    // const sum = addNumber(props.cosmetic);
     return (
         <div className='product'>
             <h3>Buy this: {name}</h3>
